@@ -1,0 +1,6 @@
+1. Composer update
+2. php artisan key:generate
+3. php artisan passport:install
+4. npm install
+5. npm run dev
+6. composer update

@@ -1,0 +1,67 @@
+.size-small{
+    height: 33px;
+    font-size: small;
+}
+.btn-small{
+    height: 27px;
+    font-size: small;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.btn-table-edit{
+    color: limegreen;
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 5px
+}
+.btn-table-delete{
+    color: red;
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 5px
+}
+.btn-table-info{
+    color: #0a58ca;
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 5px;
+}
+.btn-table-comment{
+    color: black;
+    border: 1px solid;
+    padding: 4px;
+    border-radius: 5px;
+}
+.nav-footer{
+    bottom: 10px;
+    border-radius: 5px;
+    position: absolute;
+    background: rgba(148,255,202,0.47)
+}
+.modal-comment{
+    height: 150px;
+}
+/* si el ancho máximo es de 600px o inferiores, el texto de la tabla se ajuste a una sola linea*/
+@media (max-width: 1000px) {
+    .table-p {
+        white-space: nowrap;
+    }
+}
+/* si el ancho es mayor a 600px, el texto de la tabla que sea extenso se mostrará en multilínea*/
+@media (min-width: 1000px) {
+    .table-p{
+        white-space: normal;
+    }
+}
+/* si el ancho es mayor a 600px, el ancho de la celda tendrá un ancho de 550px */
+@media (min-width: 1000px) {
+    .table-description{
+        width: 550px;
+    }
+}
+@media (min-width: 150px) {
+    .modal-comment{
+        height: 350px;
+        overflow-y: auto;
+    }
+}

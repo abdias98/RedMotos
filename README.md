@@ -47,3 +47,5 @@ Calidad del código, legibilidad, reusabilidad, atención al detalle en el dise�
 
 
 ## VI - Pasos para iniciar/ejecutar el proyecto [Completa esta sección]# RedMotos
+* Crear base de datos y configurarla en el archivo .env en la seccion de DB_DATABASE
+* Migrar la base de datos y ejecutar los seeders con el comando php artisan migrate --seed
