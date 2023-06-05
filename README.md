@@ -52,4 +52,5 @@ Calidad del código, legibilidad, reusabilidad, atención al detalle en el dise�
 * Ejecutar comando npm run dev
 * Crear base de datos y configurarla en el archivo .env con las credenciales de la que se quiera usar
 * Migrar la base de datos y ejecutar los seeders con el comando php artisan migrate --seed
-* Ejecutar comando php artisan storage:link y dentro de la carpeta storage/app/public guardar el archivo doc.png que está en la raíz del proyecto
+* Ejecutar comando php artisan passport:install
+* Cambiar username de Clase AuthenticatesUsers que esta en vendor/laravel/ui/auth-backend/, buscar el metodo username() y cambiar el return de 'email' a 'name'

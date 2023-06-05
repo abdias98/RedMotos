@@ -22,6 +22,7 @@ class Inicio extends Component
                 ->select('tareas.*','personas.nombres','personas.apellidos')
                 ->where('tareas.estado','!=','Creada')
                 ->where('tareas.estado','!=','Terminada')
+                ->whereNull('personas.deleted_at')
                 ->get();
         }elseif (Auth::user()->hasRole('Editor')){
             $id_equipo = MiembrosEquipo::where('id_persona', Auth::user()->id_persona)->pluck('id_equipo')->first();
@@ -32,6 +33,7 @@ class Inicio extends Component
                 ->where('proyectos.id_equipo',$id_equipo)
                 ->where('tareas.estado','!=','Creada')
                 ->where('tareas.estado','!=','Terminada')
+                ->whereNull('personas.deleted_at')
                 ->get();
         }
         //Foreach para crear un arreglo que almacene la información de las tareas a mostrar y posteriormente usarlos en el plugin de FullCalendar
